@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+.sass-cache
+.publish
+build
+public
+npm-debug.log
+coverage
+.nyc_output
+Desktop.ini
+**/generated/_icons.sass
