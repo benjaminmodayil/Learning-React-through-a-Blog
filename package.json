@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "project starter",
   "license": "MIT",
+  "homepage": "https://github.io/benjaminmodayil/blendid-test",
   "engines": {
     "node": ">=7.10.0",
     "npm": ">=4.2.0"
