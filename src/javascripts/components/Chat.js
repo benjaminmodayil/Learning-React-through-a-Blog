@@ -25,6 +25,10 @@ class Chat extends React.Component {
       }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const chatbox = document.querySelector('.chatbox')
+    chatbox.scrollTo(0, chatbox.scrollHeight)
+  }
   addMessages = (text) => {
     const newMsg = {
       user: "blue",
@@ -80,13 +84,11 @@ class Chat extends React.Component {
       message: "Rocket Racoon rams rockets rinto rhis rpockets"
     },
     ]
-    const chatbox = document.querySelector('.chatbox')
     const newMessages = this.state.messages;
     newMessages.push(newMsg);
 
-    console.log(chatbox.scrollHeight)
     newMessages.push(resMsgs[Math.floor(Math.random() * resMsgs.length)])
-    chatbox.scrollTo(0, chatbox.scrollHeight)
+    
 
     this.setState({ messages: newMessages })
   }

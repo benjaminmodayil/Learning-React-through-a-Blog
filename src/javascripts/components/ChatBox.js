@@ -13,7 +13,7 @@ class ChatBox extends React.Component {
               <MessageRight text={message.message}/>
             )
           } else {
-              {console.log(message.message)};
+              // {console.log(message.message)};
             return(
               <MessageLeft text={message.message}/>
             )

@@ -7,12 +7,12 @@ class ChatInput extends React.Component {
     const text = this.inputText.value.trim();
 
     if (this.inputText.value === "" || this.inputText.value === " ") {
-        console.log('dank')
+        console.log('You need text!')
     } else {
         onSubmit(text)
         this.inputText.value = ""
-        const chatbox = document.querySelector('.chatbox')
-        chatbox.scroll(0, chatbox.scrollHeight)
+        // const chatbox = document.querySelector('.chatbox')
+        // chatbox.scroll(0, chatbox.scrollHeight)
     }
   }
 
