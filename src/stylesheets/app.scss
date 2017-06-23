@@ -1,115 +1,155 @@
 @import "base/typography";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i');
-* {
-    box-sizing: border-box;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #DEEDF0;
+  background-color: #DEEDF0;
 }
 
 .container {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 auto;
-    width: 480px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  width: 480px;
 }
 
 header {
-    background-color: #a15693;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 0.9375rem 1.875rem 0.6875rem 1.875rem;
-    position: relative;
-    p {
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin: 0;
-        text-transform: uppercase;
-        width: 87.5%;
-    }
-    img {
-        position: absolute;
-        right: 21px;
-        top: 22px;
-    }
+  background-color: #a15693;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0.9375rem 1.875rem 0.6875rem 1.875rem;
+  position: relative;
+
+  p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    width: 87.5%;
+  }
+
+  img {
+    position: absolute;
+    right: 21px;
+    top: 22px;
+  }
 }
 
 nav {
-    &:after {
-        clear: both;
-        content: "";
-        display: block;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+
+  ul {
+    float: right;
+  }
+
+  li {
+    list-style: none;
+    
+    a {
+      color: white;
+      display: inline-block;
+      font-weight: 400;
+      list-style: none;
+      padding: 1rem 0.8rem 0.8rem 0.5rem;
     }
-    ul {
-        float: right;
-    }
-    li {
-        list-style: none;
-        a {
-            color: white;
-            display: inline-block;
-            font-weight: 400;
-            list-style: none;
-            padding: 1rem 0.8rem 0.8rem 0.5rem;
-        }
-    }
+  }
 }
 
 .chatbox {
-    background-color: white;
-    min-height: 605px;
-    padding: 1.1875rem 0.75rem;
-    &:after {
-        clear: both;
-        content: "";
-        display: block;
-    }
+  background-color: white;
+  min-height: 605px; // the height of the nav when open
+  max-height: 605px; // the max-height of the nav opens
+  padding: 1.1875rem 0.75rem;
+  overflow: scroll;
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 .message {
-    border-radius: 4px;
-    clear: both;
-    font-size: 1rem;
-    font-weight: 300;
-    max-width: 80.83333333%;
-    padding: 0.9375rem 0.9375rem 0.9375rem 1rem;
-    p {
-        margin: 0;
-    }
-    &.message-left {
-        background-color: #F7F4E4;
-        float: left;
-        margin-bottom: 0.75rem;
-    }
-    &.message-right {
-        background-color: #D7F0F3;
-        float: right;
-        margin-bottom: 0.9rem;
-    }
+  animation: msgSlideUp 0.3s both ease-in-out;
+  border-radius: 4px;
+  clear: both;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 80.83333333%;
+  padding: 0.9375rem 0.9375rem 0.9375rem 1rem;
+  
+  p {
+    margin: 0;
+  }
+
+  &.message-left {
+    background-color: #F7F4E4;
+    float: left;
+    margin-bottom: 0.75rem;
+  }
+
+  &.message-right {
+    background-color: #D7F0F3;
+    float: right;
+    margin-bottom: 0.9rem;
+  }
 }
 
-.message-input {
-    background-color: #F2F2F2;
-    padding: 0.875rem 0.75rem 0.8rem 0.875rem;
-    width: 100%;
-    input {
-        min-height: 42px;
-        width: 78.75%;
-    }
-    button[label="send"] {
-        background-color: #a15693;
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
-        border: 0px solid transparent;
-        bottom: -1px;
-        color: white;
-        font-size: 14px;
-        min-height: 42px;
-        min-width: 80px;
-        padding: 10px 14px;
-        position: relative;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
+@keyframes msgSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
+.message-input {
+  background-color: #F2F2F2;
+  padding: 0.875rem 0.75rem 0.8rem 0.875rem;
+  width: 100%;
+
+  input {
+    min-height: 42px;
+    width: 78.75%;
+  }
+
+  button.send {
+    background-color: #a15693;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 0px solid transparent;
+    bottom: -1px;
+    color: white;
+    font-size: 14px;
+    min-height: 42px;
+    min-width: 80px;
+    padding: 10px 14px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+.screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+

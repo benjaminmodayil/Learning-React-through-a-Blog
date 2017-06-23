@@ -1,12 +1,1 @@
-<svg width="35" height="20" viewBox="0 0 35 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>Vector 2</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-184 -4395)">
-<g id="Vector 2">
-<use xlink:href="#path0_stroke" transform="translate(185 4396)" fill="#FFFFFF"/>
-</g>
-</g>
-<defs>
-<path id="path0_stroke" d="M 18 18L 17.6464 18.3536L 18.0336 18.7407L 18.3841 18.3201L 18 18ZM 32.6159 -0.320092L 17.6159 17.6799L 18.3841 18.3201L 33.3841 0.320092L 32.6159 -0.320092ZM 18.3536 17.6464L 0.353553 -0.353553L -0.353553 0.353553L 17.6464 18.3536L 18.3536 17.6464Z"/>
-</defs>
-</svg>
+<svg width="35" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Expand Chatbox</title><use xlink:href="#a" transform="translate(1 1)" fill="#FFF"/><defs><path id="a" d="M18 18l-.3536.3536.3872.3871.3505-.4206L18 18zM32.6159-.320092l-15 17.999992.7682.6402 15-18.000008-.7682-.640184zM18.3536 17.6464L.353553-.353553l-.707106.707106L17.6464 18.3536l.7072-.7072z"/></defs></svg>
