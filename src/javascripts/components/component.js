@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 class Thing extends React.Component {
   constructor(props) {
     super(props)
-
     const { foo } = this.props
     this.state = {
       visible: false
