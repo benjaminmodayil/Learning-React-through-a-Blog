@@ -1,6 +1,6 @@
-import React from 'react';
-import MessageLeft from './MessageLeft';
-import MessageRight from './MessageRight';
+import React from 'react'
+import MessageLeft from './MessageLeft'
+import MessageRight from './MessageRight'
 
 class ChatBox extends React.Component {
   render() {
@@ -13,15 +13,14 @@ class ChatBox extends React.Component {
               <MessageRight text={message.message}/>
             )
           } else {
-              // {console.log(message.message)};
-            return(
-              <MessageLeft text={message.message}/>
-            )
-          }
+              return(
+                <MessageLeft text={message.message}/>
+              )
+            }
         })}
       </div>
     )
   }
 }
 
-export default ChatBox;
+export default ChatBox

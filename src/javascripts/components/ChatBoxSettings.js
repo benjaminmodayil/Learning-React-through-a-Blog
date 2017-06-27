@@ -1,5 +1,5 @@
-var React = require('react');
-var MoreSettings = require('./MoreSettings');
+var React = require('react')
+var MoreSettings = require('./MoreSettings')
 
 class ChatBoxSettings extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class ChatBoxSettings extends React.Component {
         <img src="./images/caret-down.svg" />
       </header>
     )
-  }   
+  }
 }
 
 module.exports = ChatBoxSettings;

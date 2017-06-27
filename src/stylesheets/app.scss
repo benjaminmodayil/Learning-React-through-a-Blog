@@ -1,6 +1,13 @@
 @import "base/typography";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i');
 
+//colors
+$c-lightBlue: #DEEDF0;
+$c-purple: #a15693;
+$c-lightYellow: #F7F4E4;
+$c-white: #F2F2F2;
+
+//fonts
 *,
 *:before,
 *:after {
@@ -8,7 +15,7 @@
 }
 
 body {
-  background-color: #DEEDF0;
+  background-color: $c-lightBlue;
 }
 
 .container {
@@ -18,7 +25,7 @@ body {
 }
 
 header {
-  background-color: #a15693;
+  background-color: $c-purple;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 0.9375rem 1.875rem 0.6875rem 1.875rem;
@@ -79,44 +86,40 @@ nav {
 }
 
 .message {
-  animation: msgSlideUp 0.3s both ease-in-out;
   border-radius: 4px;
   clear: both;
   font-size: 1rem;
   font-weight: 300;
   max-width: 80.83333333%;
   padding: 0.9375rem 0.9375rem 0.9375rem 1rem;
-  
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease-out;
+
   p {
     margin: 0;
   }
 
   &.message-left {
-    background-color: #F7F4E4;
+    background-color: $c-lightYellow;
     float: left;
     margin-bottom: 0.75rem;
   }
 
   &.message-right {
-    background-color: #D7F0F3;
+    background-color: $c-lightBlue;
     float: right;
     margin-bottom: 0.9rem;
   }
-}
 
-@keyframes msgSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
+  &.-show {
     opacity: 1;
     transform: translateY(0px);
   }
 }
+
 .message-input {
-  background-color: #F2F2F2;
+  background-color: $c-white;
   padding: 0.875rem 0.75rem 0.8rem 0.875rem;
   width: 100%;
 
@@ -125,8 +128,17 @@ nav {
     width: 78.75%;
   }
 
+  input[type=text]:focus, textarea:focus {
+ -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+  box-shadow: inset 2px 2px 2px 0px #dddddd;
+    padding: 10px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
+
   button.send {
-    background-color: #a15693;
+    background-color: $c-purple;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     border: 0px solid transparent;
@@ -152,4 +164,5 @@ nav {
   position: absolute;
   width: 1px;
 }
+
 

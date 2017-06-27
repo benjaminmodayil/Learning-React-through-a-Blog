@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 
 class MoreSettings extends React.Component {
   render() {
@@ -16,4 +16,4 @@ class MoreSettings extends React.Component {
   } 
 }
 
-module.exports = MoreSettings;
+export default MoreSettings
