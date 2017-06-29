@@ -3,10 +3,18 @@ import MessageLeft from './MessageLeft'
 import MessageRight from './MessageRight'
 
 class ChatBox extends React.Component {
+  componentDidMount() {
+    this.chatcontainer.scrollTo(0, this.chatcontainer.scrollHeight)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.chatcontainer.scrollTo(0, this.chatcontainer.scrollHeight)
+  }
+
   render() {
     const { messages } = this.props
     return (
-      <div className="chatbox">
+      <div ref={(chatbox) => this.chatcontainer = chatbox} className="chatbox">
         { messages.map((message) => {
           if (message.user === "blue") {
             return(

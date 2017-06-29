@@ -7,7 +7,9 @@ $c-purple: #a15693;
 $c-lightYellow: #F7F4E4;
 $c-white: #F2F2F2;
 
-//fonts
+//font(s)
+$f-mont: 'Montserrat', sans-serif;
+
 *,
 *:before,
 *:after {
@@ -16,10 +18,10 @@ $c-white: #F2F2F2;
 
 body {
   background-color: $c-lightBlue;
+  font-family: $f-mont;
 }
 
 .container {
-  font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   width: 480px;
 }
@@ -48,7 +50,6 @@ header {
 }
 
 nav {
-
   &:after {
     clear: both;
     content: "";
@@ -129,12 +130,13 @@ nav {
   }
 
   input[type=text]:focus, textarea:focus {
- -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
-  -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
-  box-shadow: inset 2px 2px 2px 0px #dddddd;
-    padding: 10px;
-    margin: 5px 1px 3px 0px;
     border: 1px solid rgba(81, 203, 238, 1);
+    margin: 5px 1px 3px 0px;
+    padding: 10px;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    
   }
 
   button.send {

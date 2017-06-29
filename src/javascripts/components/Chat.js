@@ -2,7 +2,7 @@ import React from 'react'
 import ChatBoxSettings from './ChatBoxSettings'
 import ChatBox from './ChatBox'
 import ChatInput from './ChatInput'
-import { resMsgs } from '../helper'
+import resMsgs from '../helper'
 
 class Chat extends React.Component {
   constructor() {
@@ -26,7 +26,7 @@ class Chat extends React.Component {
   }  
 
   componentWillMount() {
-    const localStorageRef = localStorage.getItem(`messages`)  
+    const localStorageRef = localStorage ? localStorage.getItem('messages') : null
     if(localStorageRef) {
       this.setState({
         messages: JSON.parse(localStorageRef)
@@ -34,22 +34,21 @@ class Chat extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const chatbox = document.querySelector('.chatbox')
-    chatbox.scrollTo(0, chatbox.scrollHeight)
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const chatbox = document.querySelector('.chatbox')
-    chatbox.scrollTo(0, chatbox.scrollHeight)
-  }
-
   componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem(`messages`, JSON.stringify(nextState.messages))
+    localStorage ? localStorage.setItem(`messages`, JSON.stringify(nextState.messages)) : null
   }
 
-  addMessages = (text) => {
+  addResponse = () => {
+    const randNum = Math.floor(Math.random() * 3000) + 200
+    const newMessages = this.state.messages
+    
+    setTimeout( () => {
+      newMessages.push(resMsgs[Math.floor(Math.random() * resMsgs.length)])
+      this.setState({ messages: newMessages })
+    }, randNum)
+  }
 
+  addMessage = (text) => {
     const newMsg = {
       user: "blue",
       message: text
@@ -58,71 +57,16 @@ class Chat extends React.Component {
     const newMessages = this.state.messages
     newMessages.push(newMsg)
     this.setState({ messages: newMessages })
-    const randNum = Math.floor(Math.random() * 3000) + 200
-
-    const resMsgs = [
-        {
-            user: "yellow",
-            message: "Waddup"
-        },
-        {
-            user: "yellow",
-            message: "Insert meme here"
-        },
-        {
-            user: "yellow",
-            message: "You're so funny!"
-        },
-        {
-            user: "yellow",
-            message: "So... the weather today?"
-        },
-        {
-            user: "yellow",
-            message: "Ding Dong Diddly Doo I'm rhyming words and singing to you."
-        },
-        {
-            user: "yellow",
-            message: "Mathmatical!"
-        },
-        {
-            user: "yellow",
-            message: "How are you today?"
-        },
-        {
-            user: "yellow",
-            message: "Hahahaha"
-        },
-        {
-            user: "yellow",
-            message: "I pronounce 'memes' like 'me' 'mees'"
-        },
-        {
-            user: "yellow",
-            message: "That makes a lot of sense!"
-        },
-        {
-            user: "yellow",
-            message: "Diddly doo, this rhymes with poo and you."
-        },
-        {
-            user: "yellow",
-            message: "Rocket Racoon rams rockets rinto rhis rpockets"
-        }
-      ]
-      setTimeout( () => {
-        newMessages.push(resMsgs[Math.floor(Math.random() * resMsgs.length)])
-        this.setState({ messages: newMessages })
-      }, randNum)
+    this.addResponse()
   }
 
   render() {
     return (
-        <div className='container'>
-          <ChatBoxSettings />
-          <ChatBox messages={this.state.messages} params={this.props.params.messageId} />
-          <ChatInput onSubmit={this.addMessages}/>
-        </div>
+      <div className='container'>
+        <ChatBoxSettings />
+        <ChatBox messages={this.state.messages} params={this.props.params.messageId} />
+        <ChatInput onSubmit={this.addMessage}/>
+      </div>
     )
   }
 }

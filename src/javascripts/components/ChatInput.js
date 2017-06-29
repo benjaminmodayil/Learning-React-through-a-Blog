@@ -1,19 +1,23 @@
 import React from 'react'
 
 class ChatInput extends React.Component {
+
+  componentDidMount() {
+    this.inputText.focus();
+  }
+
   handleSubmit = (event) => {
     const { onSubmit } = this.props
     const text = this.inputText.value.trim()
-
-    if (this.inputText.value === "" || this.inputText.value === " ") {
-        console.log('You need text!')
-        this.inputText.focus()
+    if (text) {
+      onSubmit(text)
+      this.inputText.value = ""
+      this.inputText.focus()
+      event.preventDefault()
     } else {
-        onSubmit(text)
-        this.inputText.value = ""
-        this.inputText.focus()
+        event.preventDefault()
+        null
       }
-    event.preventDefault()
   }
 
   render() {

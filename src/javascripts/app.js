@@ -6,9 +6,9 @@ import routes from './routes'
 import { AppContainer } from 'react-hot-loader'
 import { Router, browserHistory } from 'react-router'
 
-window.onload = function() {
-    document.getElementById("message-input").focus();
-};
+// window.onload = function() {
+//     document.getElementById("message-input").focus();
+// };
 const repo = new Repo()
 // Render
 DOM.render(
