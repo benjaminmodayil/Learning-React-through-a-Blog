@@ -6,28 +6,30 @@ import resMsgs from '../helper'
 
 class Chat extends React.Component {
   constructor() {
-      super()
-      this.state = {
-        messages: [
-          {
-            user: "blue",
-            message: "blah blah blah"
-          }, 
-          {
-            user: "yellow",
-            message: "Lorem ipsum dipsum"
-          },
-          {
-            user: "yellow",
-            message: "Hallo lorem"
-          }
-        ]
-      }
-  }  
+    super()
+    this.state = {
+      messages: [
+        {
+          user: 'blue',
+          message: 'blah blah blah'
+        },
+        {
+          user: 'yellow',
+          message: 'Lorem ipsum dipsum'
+        },
+        {
+          user: 'yellow',
+          message: 'Hallo lorem'
+        }
+      ]
+    }
+  }
 
   componentWillMount() {
-    const localStorageRef = localStorage ? localStorage.getItem('messages') : null
-    if(localStorageRef) {
+    const localStorageRef = localStorage
+      ? localStorage.getItem('messages')
+      : null
+    if (localStorageRef) {
       this.setState({
         messages: JSON.parse(localStorageRef)
       })
@@ -35,22 +37,24 @@ class Chat extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    localStorage ? localStorage.setItem(`messages`, JSON.stringify(nextState.messages)) : null
+    localStorage
+      ? localStorage.setItem(`messages`, JSON.stringify(nextState.messages))
+      : null
   }
 
   addResponse = () => {
     const randNum = Math.floor(Math.random() * 3000) + 200
     const newMessages = this.state.messages
-    
-    setTimeout( () => {
+
+    setTimeout(() => {
       newMessages.push(resMsgs[Math.floor(Math.random() * resMsgs.length)])
       this.setState({ messages: newMessages })
     }, randNum)
   }
 
-  addMessage = (text) => {
+  addMessage = text => {
     const newMsg = {
-      user: "blue",
+      user: 'blue',
       message: text
     }
 
@@ -62,10 +66,13 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container">
         <ChatBoxSettings />
-        <ChatBox messages={this.state.messages} params={this.props.params.messageId} />
-        <ChatInput onSubmit={this.addMessage}/>
+        <ChatBox
+          messages={this.state.messages}
+          params={this.props.params.messageId}
+        />
+        <ChatInput onSubmit={this.addMessage} />
       </div>
     )
   }

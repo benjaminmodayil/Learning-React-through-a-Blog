@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class MessageLeft extends React.Component {
 
@@ -18,4 +18,4 @@ class MessageLeft extends React.Component {
   }
 }
 
-export default MessageLeft;
+export default MessageLeft

@@ -1,0 +1,23 @@
+@function rd($x, $y) {
+    $size: percentage($x / $y);
+    @return $size;
+}
+@function rem($x) {
+    $size: ($x / 16);
+    @return #{$size}rem;
+}
+@mixin fz($size) {
+    font-size: #{$size}px; //Fallback in px
+    font-size: rem($size);
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+%clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+

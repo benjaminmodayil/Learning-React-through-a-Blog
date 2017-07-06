@@ -4,7 +4,7 @@ var MoreSettings = require('./MoreSettings')
 class ChatBoxSettings extends React.Component {
   render() {
     return (
-      <header>
+      <header className="chat">
         <p>Ask Name</p>
         <img src="./images/caret-down.svg" />
       </header>
@@ -12,4 +12,4 @@ class ChatBoxSettings extends React.Component {
   }
 }
 
-module.exports = ChatBoxSettings;
+module.exports = ChatBoxSettings

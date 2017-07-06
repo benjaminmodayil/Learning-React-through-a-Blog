@@ -1,0 +1,31 @@
+export default {
+  "response": [
+    {
+      "id": 1,
+      "headerImg": "http://fillmurray.com/200/300",
+      "title": "Down the Rabbit Hole",
+      "body": "Hallo World",
+      "meta": {
+        "date": "November 3rd, 2017",
+        "categories": ["Literature", "Science", "Math", "Geography"],
+        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"
+        ]
+      },
+      "author": 1
+    },
+    {
+      "id": 2,
+      "headerImg": "http://fillmurray.com/200/300",
+      "title": "Down the Rabbit Trail",
+      "body": "Hallo World",
+      "meta": {
+        "date": "November 3rd, 2017",
+        "categories": ["Literature", "Science", "Math", "Geography"],
+        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"
+        ]
+      },
+      "author": 2
+    }
+  ]
+}
+
