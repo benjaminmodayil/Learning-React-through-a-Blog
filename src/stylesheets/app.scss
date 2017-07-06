@@ -18,7 +18,9 @@ $c-text: #4f4f4f;
 $f-mont: "Montserrat", sans-serif;
 $f-merri: "Merriweather", sans-serif;
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -139,11 +141,12 @@ nav {
     width: 78.75%;
   }
 
-  input[type=text]:focus, textarea:focus {
+  input[type=text]:focus,
+  textarea:focus {
     border: 1px solid rgba(81, 203, 238, 1);
     -webkit-box-shadow: inset 2px 2px 2px 0 #ddd;
-    -moz-box-shadow: inset 2px 2px 2px 0 #ddd;
-    box-shadow: inset 2px 2px 2px 0 #ddd;
+       -moz-box-shadow: inset 2px 2px 2px 0 #ddd;
+            box-shadow: inset 2px 2px 2px 0 #ddd;
     margin: 5px 1px 3px 0;
     padding: 10px;
   }
@@ -252,6 +255,7 @@ nav {
     display: block;
     margin: .8rem auto;
     width: rd(582, 950);
+
     @include breakpoint(max-width 600px) {
       width: 100%;
     }
@@ -301,6 +305,7 @@ nav {
 .index-nav {
   ul {
     width: 100%;
+
     @extend %clearfix;
   }
   li {
@@ -321,7 +326,8 @@ nav {
         height: auto;
         width: 20px;
       }
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -374,7 +380,8 @@ nav {
       display: block;
       margin-bottom: .25rem;
       text-decoration: none;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -388,12 +395,12 @@ nav {
   header {
     // background-color: $c-brightYellow;
     background: linear-gradient(
-        rgba(196, 165, 0, 0.7),
-        rgba(196, 165, 0, 0.7)
-      ),
-      url('/images/alice-in-wonderland-big.png');
-    background-repeat: no-repeat;
+    rgba(196, 165, 0, .7),
+    rgba(196, 165, 0, .7)
+    ),
+    url("/images/alice-in-wonderland-big.png");
     background-position: center;
+    background-repeat: no-repeat;
     padding-bottom: rem(630);
     position: relative;
   }
@@ -409,9 +416,9 @@ nav {
     // background-image: url('/images/alice-in-wonderland-big.png');
     background-repeat: no-repeat;
     background-size: contain;
+    height: 100%;
     position: absolute;
     width: rd(572, 1440);
-    height: 100%;
     z-index: 20;
   }
 
@@ -453,25 +460,28 @@ nav {
 .articlePreview {
   border-radius: 4px;
   clear: both;
+  color: $c-text;
   margin-bottom: rem(90);
   padding: 1rem;
   transition: all .3s ease-in-out;
-  color: $c-text;
+
+  @extend %clearfix;
+  @include breakpoint(max-width 600px) {
+    margin-bottom: rem(38);
+  }
   h1 {
     color: $c-yellow;
     font-family: $f-mont;
     font-weight: 400;
     margin-bottom: rem(20);
+
     @include fz(36);
     @include breakpoint(max-width 650px) {
       @include fz(28);
     }
   }
-  @extend %clearfix;
-  @include breakpoint(max-width 600px) {
-    margin-bottom: rem(38);
-  }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $c-brightYellow;
     * {
       color: white;
@@ -484,8 +494,10 @@ nav {
   a {
     color: $c-text;
     text-decoration: none;
+
     @extend %clearfix;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       h1 {
         text-decoration: underline;
       }
@@ -496,13 +508,15 @@ nav {
     font-family: $f-merri;
     line-height: 1.7;
     margin-top: rem(18);
-    &:hover, &:focus {
-      text-decoration: none;
-    }
+
     @include fz(15);
     @include breakpoint(max-width 600px) {
       // @include fz(15);
       line-height: 1.8;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
   small {
@@ -537,6 +551,7 @@ nav {
     float: left;
     margin-left: rd(30, 950);
     width: rd(720, 950);
+
     @include breakpoint(max-width 600px) {
       float: none;
       margin-left: 0;
@@ -550,8 +565,14 @@ nav {
 .articleIndex {
   a {
     text-decoration: none;
-    &:focus, &:hover {
-      h1, h2, h3, h4, h5, h6 {
+    &:focus,
+    &:hover {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         text-decoration: underline;
       }
     }
@@ -586,12 +607,14 @@ nav {
     }
     &:nth-of-type(2) {
       margin-bottom: 1rem;
+
       @include fz(14);
       a {
-      text-decoration: none;
-      &:hover, &:focus {
+        text-decoration: none;
+        &:hover,
+        &:focus {
           text-decoration: underline;
-      }
+        }
       }
     }
   }
@@ -612,7 +635,17 @@ footer.--authorinfo {
   @include breakpoint(max-width 600px) {
     width: rd(1300, 1440);
   }
-  
+  @include breakpoint(max-width 650px) {
+    img {
+      display: none;
+      float: none;
+    }
+    .--bio {
+      float: none;
+      width: 100%;
+    }
+  }
+
   img {
     border-radius: 50%;
     float: left;
@@ -642,14 +675,4 @@ footer.--authorinfo {
       @include fz(15);
     }
   }
-  @include breakpoint(max-width 650px) {
-        img {
-            display: none;
-            float: none;
-        }
-        .--bio {
-            float: none;
-            width: 100%;
-        }
-    }
 }
