@@ -1,9 +1,6 @@
-import React     from 'react'
-import {
-  Route,
-  IndexRoute
-} from 'react-router'
-import App       from './presenters/application'
+import React from 'react'
+import { Route, IndexRoute } from 'react-router'
+import App from './presenters/application'
 import Blog from './components/blog/Blog'
 import Article from './components/blog/article/Article'
 import Chat from './components/Chat'
