@@ -26,9 +26,7 @@ class Chat extends React.Component {
   }
 
   componentWillMount() {
-    const localStorageRef = localStorage
-      ? localStorage.getItem('messages')
-      : null
+    const localStorageRef = localStorage ? localStorage.getItem('messages') : null
     if (localStorageRef) {
       this.setState({
         messages: JSON.parse(localStorageRef)
@@ -37,9 +35,11 @@ class Chat extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    localStorage
-      ? localStorage.setItem(`messages`, JSON.stringify(nextState.messages))
-      : null
+    if (localStorage) {
+      localStorage.setItem(`messages`, JSON.stringify(nextState.messages))
+    } else {
+      null
+    }
   }
 
   addResponse = () => {
@@ -68,10 +68,7 @@ class Chat extends React.Component {
     return (
       <div className="container">
         <ChatBoxSettings />
-        <ChatBox
-          messages={this.state.messages}
-          params={this.props.params.messageId}
-        />
+        <ChatBox messages={this.state.messages} params={this.props.params.messageId} />
         <ChatInput onSubmit={this.addMessage} />
       </div>
     )

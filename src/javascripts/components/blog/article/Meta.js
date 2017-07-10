@@ -3,7 +3,7 @@ import React from 'react'
 class Meta extends React.Component {
   render() {
     return (
-      <div className="article-meta">
+      <div className="article_meta">
         <small>
           <span>Categories</span>
           <span><a href="">Literature, Children</a></span>
