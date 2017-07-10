@@ -18,9 +18,7 @@ $c-text: #4f4f4f;
 $f-mont: "Montserrat", sans-serif;
 $f-merri: "Merriweather", sans-serif;
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -141,12 +139,11 @@ nav {
     width: 78.75%;
   }
 
-  input[type=text]:focus,
-  textarea:focus {
+  input[type=text]:focus, textarea:focus {
     border: 1px solid rgba(81, 203, 238, 1);
     -webkit-box-shadow: inset 2px 2px 2px 0 #ddd;
-       -moz-box-shadow: inset 2px 2px 2px 0 #ddd;
-            box-shadow: inset 2px 2px 2px 0 #ddd;
+    -moz-box-shadow: inset 2px 2px 2px 0 #ddd;
+    box-shadow: inset 2px 2px 2px 0 #ddd;
     margin: 5px 1px 3px 0;
     padding: 10px;
   }
@@ -212,7 +209,7 @@ nav {
   }
 }
 // author bio page
-.authorBio--container {
+.bio {
   background-color: white;
   margin: 0 auto;
   width: rd(950, 1440);
@@ -223,11 +220,11 @@ nav {
   @include breakpoint(max-width 500px) {
     width: rd(1300, 1440);
   }
-  .authorBio--bio {
+  .bio__inner {
     border-bottom: 1px solid black;
     padding-bottom: rem(46);
 
-    .--portrait {
+    .bio__inner__portrait {
       border-radius: 50%;
       display: block;
       margin: 0 auto;
@@ -302,7 +299,7 @@ nav {
 }
 
 //article index nav
-.index-nav {
+.article-index__nav {
   ul {
     width: 100%;
 
@@ -326,8 +323,7 @@ nav {
         height: auto;
         width: 20px;
       }
-      &:hover,
-      &:focus {
+      &:hover, &:focus {
         text-decoration: underline;
       }
     }
@@ -349,7 +345,7 @@ nav {
   }
 }
 
-.article--titleCard {
+.article-inner__titleCard {
   background-color: white;
   margin: 0 auto rem(58) auto;
   margin-bottom: rem(58);
@@ -369,7 +365,7 @@ nav {
       @include fz(46);
     }
   }
-  .--authormeta {
+  .article-inner__authormeta {
     border-bottom: 1px solid lighten($c-text, 60%);
     border-top: 1px solid lighten($c-text, 60%);
     padding-bottom: rem(19);
@@ -380,31 +376,27 @@ nav {
       display: block;
       margin-bottom: .25rem;
       text-decoration: none;
-      &:hover,
-      &:focus {
+      &:hover, &:focus {
         text-decoration: underline;
       }
     }
   }
 }
 
-.article--container {
+.article-container {
   max-width: 100%;
   width: 100%;
 
   header {
     // background-color: $c-brightYellow;
-    background: linear-gradient(
-    rgba(196, 165, 0, .7),
-    rgba(196, 165, 0, .7)
-    ),
-    url("/images/alice-in-wonderland-big.png");
+    background: linear-gradient(rgba(196, 165, 0, .7), rgba(196, 165, 0, .7)),
+      url("/images/alice-in-wonderland-big.png");
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: rem(630);
     position: relative;
   }
-  .header--inner {
+  .article-header__inner {
     padding: 1rem;
     img {
       display: block;
@@ -412,7 +404,7 @@ nav {
       max-width: 100%;
     }
   }
-  .header--bgImg {
+  .article-header__bg {
     // background-image: url('/images/alice-in-wonderland-big.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -422,7 +414,7 @@ nav {
     z-index: 20;
   }
 
-  .article--inner {
+  .article-inner {
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
@@ -457,7 +449,7 @@ nav {
 }
 // article index
 
-.articlePreview {
+.article-index__preview {
   border-radius: 4px;
   clear: both;
   color: $c-text;
@@ -480,13 +472,12 @@ nav {
       @include fz(28);
     }
   }
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     background-color: $c-brightYellow;
     * {
       color: white;
     }
-    .articlePreview-authorName {
+    .article-index__authorName {
       border-right: 1px solid white;
     }
   }
@@ -496,8 +487,7 @@ nav {
     text-decoration: none;
 
     @extend %clearfix;
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
       h1 {
         text-decoration: underline;
       }
@@ -514,8 +504,7 @@ nav {
       // @include fz(15);
       line-height: 1.8;
     }
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
       text-decoration: none;
     }
   }
@@ -562,17 +551,11 @@ nav {
     @extend %clearfix;
   }
 }
-.articleIndex {
+.article-index {
   a {
     text-decoration: none;
-    &:focus,
-    &:hover {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+    &:focus, &:hover {
+      h1, h2, h3, h4, h5, h6 {
         text-decoration: underline;
       }
     }
@@ -611,8 +594,7 @@ nav {
       @include fz(14);
       a {
         text-decoration: none;
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
           text-decoration: underline;
         }
       }
@@ -620,7 +602,7 @@ nav {
   }
 }
 
-footer.--authorinfo {
+.author-info {
   margin: 0 auto;
   max-width: 1200px;
   width: rd(975, 1440);
@@ -640,7 +622,7 @@ footer.--authorinfo {
       display: none;
       float: none;
     }
-    .--bio {
+    .author-info__bio {
       float: none;
       width: 100%;
     }
@@ -653,7 +635,7 @@ footer.--authorinfo {
     max-width: 253px;
     width: rd(253, 975);
   }
-  .--bio {
+  .author-info__bio {
     float: left;
     width: rd(682, 975);
     h2 {

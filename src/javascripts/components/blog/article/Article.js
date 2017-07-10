@@ -23,7 +23,7 @@ class Article extends React.Component {
 // then do the author
   render() {
     return (
-      <main className="article--container">
+      <main className="article-container">
         <article>
           <Header />
           <Text />

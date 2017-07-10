@@ -5,7 +5,7 @@ class ArticleIndex extends React.Component {
 
   render() {
     return (
-      <div className="articleIndex">
+      <div className="article-index">
         <ArticlePreview />
         <ArticlePreview />
         <ArticlePreview />

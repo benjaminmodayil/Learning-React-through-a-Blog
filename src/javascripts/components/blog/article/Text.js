@@ -4,12 +4,12 @@ import { Link } from 'react-router'
 class Text extends React.Component {
   render() {
     return (
-      <div className="article--inner">
-        <div className="article--titleCard">
+      <div className="article-inner">
+        <div className="article-inner__titleCard">
           <h1>Down the Rabbit Hole</h1>
-          <div className="--authormeta">
+          <div className="article-inner__authormeta">
             <Link to="/author">Lewis Carroll</Link>
-            <span className="--date">
+            <span className="article-inner__date">
               November 26, 1865
             </span>
           </div>

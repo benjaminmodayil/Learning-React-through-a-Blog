@@ -4,20 +4,21 @@ import { Link } from 'react-router'
 class ArticlePreview extends React.Component {
   render() {
     return (
-      <Link to="/article"><div className="articlePreview">
-        <div className="--imageContainer">
-          <img
-            src="./images/alice-in-wonderland.png"
-            alt="Picture of 'Author'"
-          />
-        </div>
+      <Link to="/article">
+        <div className="article-index__preview">
+          <div className="--imageContainer">
+            <img
+              src="./images/alice-in-wonderland.png"
+              alt="Picture of 'Author'"
+            />
+          </div>
           <div className="--preview">
             <h1>Down The Rabbit Hole</h1>
             <div className="articlePreview-postMeta">
-              <small className="articlePreview-authorName">
+              <small className="article-index__authorName">
                 <Link to="/author">Lewis Carroll</Link>
               </small>
-              <small className="articlePreview-date">
+              <small className="article-index__date">
                 November 26, 1865
               </small>
             </div>
@@ -29,7 +30,8 @@ class ArticlePreview extends React.Component {
               thought Alice...
             </p>
           </div>
-      </div></Link>
+        </div>
+      </Link>
     )
   }
 }
