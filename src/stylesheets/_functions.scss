@@ -10,3 +10,11 @@
   font-size: #{$size}px; //Fallback in px
   font-size: rem($size);
 }
+
+@mixin clearfix() {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

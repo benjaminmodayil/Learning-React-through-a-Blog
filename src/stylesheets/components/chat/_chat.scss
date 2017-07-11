@@ -1,0 +1,54 @@
+.chat {
+  background-color: $c-purple;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: .9375rem 1.875rem .6875rem 1.875rem;
+  position: relative;
+
+  p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+    width: 87.5%;
+  }
+
+  img {
+    max-width: 100%;
+    position: absolute;
+    right: 21px;
+    top: 22px;
+  }
+}
+
+//write a class for this nav
+nav {
+  @include clearfix();
+
+  ul {
+    float: right;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      color: white;
+      display: inline-block;
+      font-weight: 400;
+      list-style: none;
+      padding: 1rem .8rem .8rem .5rem;
+    }
+  }
+}
+
+.chatbox {
+  background-color: white;
+  max-height: 605px; // the max-height of the nav opens
+  min-height: 605px; // the height of the nav when open
+  overflow: scroll;
+  padding: 1.1875rem .75rem;
+
+  @include clearfix();
+}

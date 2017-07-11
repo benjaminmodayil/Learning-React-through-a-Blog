@@ -3,20 +3,20 @@ import { Link } from 'react-router'
 
 class ArticlePreview extends React.Component {
   render() {
+    const { post } = this.props
+    console.log(post)
+
     return (
       <Link to="/article">
         <div className="article-index__preview">
-          <div className="--imageContainer">
-            <img
-              src="./images/alice-in-wonderland.png"
-              alt="Picture of 'Author'"
-            />
+          <div className="-imageContainer">
+            <img src="./images/alice-in-wonderland.png" alt="Picture of 'Author'" />
           </div>
-          <div className="--preview">
-            <h1>Down The Rabbit Hole</h1>
+          <div className="-preview">
+            <h1>dfad</h1>
             <div className="articlePreview-postMeta">
               <small className="article-index__authorName">
-                <Link to="/author">Lewis Carroll</Link>
+                <Link to="/author">dfad</Link>
               </small>
               <small className="article-index__date">
                 November 26, 1865

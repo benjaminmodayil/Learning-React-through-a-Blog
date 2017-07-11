@@ -1,0 +1,32 @@
+.message {
+  border-radius: 4px;
+  clear: both;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 80.83333333%;
+  opacity: 0;
+  padding: .9375rem .9375rem .9375rem 1rem;
+  transform: translateY(10px);
+  transition: all .2s ease-out;
+
+  p {
+    margin: 0;
+  }
+
+  &.message-left {
+    background-color: $c-lightYellow;
+    float: left;
+    margin-bottom: .75rem;
+  }
+
+  &.message-right {
+    background-color: $c-lightBlue;
+    float: right;
+    margin-bottom: .9rem;
+  }
+
+  &.-show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

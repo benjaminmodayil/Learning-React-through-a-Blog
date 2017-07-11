@@ -1,0 +1,47 @@
+.article-index__nav {
+  ul {
+    width: 100%;
+    @extend %clearfix;
+  }
+
+  li {
+    a {
+      color: $c-purple;
+      font-family: $f-mont;
+      font-weight: 200;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include fz(48);
+
+      @include breakpoint(max-width 650px) {
+        padding: 0;
+        @include fz(24);
+      }
+
+      img {
+        height: auto;
+        width: 20px;
+      }
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+    span {
+      bottom: 5px;
+      padding: 1rem;
+      position: relative;
+      @include breakpoint(max-width 650px) {
+        bottom: 8px;
+      }
+    }
+
+    &:first-of-type {
+      float: left;
+    }
+
+    &:nth-of-type(2) {
+      float: right;
+    }
+  }
+}

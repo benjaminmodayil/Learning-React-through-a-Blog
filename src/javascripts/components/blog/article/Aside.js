@@ -2,14 +2,15 @@ import React from 'react'
 
 class Aside extends React.Component {
   render() {
+    const { post } = this.props
+
     return (
       <aside className="author-info">
-        <img src="./images/lewis-carroll.png" alt="Lewis Carroll" />
+        <img src="./images/lewis-carroll.png" alt={post.author.name} />
         <div className="author-info__bio">
-          <h2>Lewis Carroll</h2>
+          <h2>{post.author.name}</h2>
           <p>
-            Charles Lutwidge Dodgson (27 January 1832 – 14 January 1898), better known by his pen name, Lewis Carroll,
-            was an English writer, mathematician, logician, Anglican deacon and photographer.{' '}
+            {post.author.bio}
           </p>
           <p>
             His most famous writings are Alice's Adventures in Wonderland, its sequel Through the Looking-Glass, which

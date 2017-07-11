@@ -1,0 +1,58 @@
+.bio {
+  background-color: white;
+  margin: 0 auto;
+  width: rd(950, 1440);
+
+  @include breakpoint(max-width 900px) {
+    width: rd(1200, 1440);
+  }
+  @include breakpoint(max-width 500px) {
+    width: rd(1300, 1440);
+  }
+
+  .logo-title {
+    display: block;
+    margin: .8rem auto;
+    width: rd(582, 950);
+
+    @include breakpoint(max-width 600px) {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.bio__inner {
+  border-bottom: 1px solid black;
+  margin-bottom: rem(36);
+  padding-bottom: rem(46);
+
+  h1 {
+    font-family: $f-mont;
+    font-weight: 300;
+    margin-top: rem(18);
+    text-align: center;
+    text-transform: uppercase;
+    @include fz(56);
+  }
+
+  p {
+    font-family: $f-merri;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: rem(24);
+
+    &:first-of-type {
+      margin-top: rem(28);
+    }
+  }
+}
+
+.bio__inner__portrait {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}

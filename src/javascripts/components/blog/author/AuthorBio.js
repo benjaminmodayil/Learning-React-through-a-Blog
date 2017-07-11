@@ -2,24 +2,20 @@ import React from 'react'
 import { Link } from 'react-router'
 import ArticleIndex from '../../blog/ArticleIndex'
 import PageNav from '../../blog/ArticleIndexPageNav'
+import posts from '../../../data/posts.json'
+import authors from '../../../data/authors.json'
 
 class AuthorBio extends React.Component {
+  // const { posts } = this.props
   render() {
     return (
       <main className="bio">
         <Link to="/" className="logo-title">
-          <img
-            src="./images/blog-title.svg"
-            alt="Aspiring Writer's Alley - Link to Home"
-          />
+          <img src="./images/blog-title.svg" alt="Aspiring Writer's Alley - Link to Home" />
         </Link>
         <div className="bio__inner">
-          <img
-            className="bio__inner__portrait"
-            src="./images/lewis-carroll.png"
-            alt="Lewis Carroll Portrait"
-          />
-          <h1>Lewis Carroll</h1>
+          <img className="bio__inner__portrait" src="./images/lewis-carroll.png" alt="Lewis Carroll Portrait" />
+          <h1>They call me Lew</h1>
           <p>
             Charles Lutwidge Dodgson (27 January 1832 – 14 January 1898), better
             known by his pen name, Lewis Carroll, was an English writer,

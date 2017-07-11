@@ -1,0 +1,152 @@
+.article-inner__titleCard {
+  background-color: white;
+  margin: 0 auto rem(58) auto;
+  margin-bottom: rem(58);
+  max-width: 1200px;
+  padding-top: rem(23);
+  width: 100%;
+
+  h1 {
+    font-weight: 300;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    text-align: center;
+    text-transform: uppercase;
+    @include fz(56);
+
+    @include breakpoint(max-width 600px) {
+      @include fz(46);
+    }
+  }
+}
+
+.article-inner__authormeta {
+  border-bottom: 1px solid lighten($c-text, 60%);
+  border-top: 1px solid lighten($c-text, 60%);
+  padding-bottom: rem(19);
+  padding-top: rem(24);
+  text-align: center;
+
+  a {
+    color: $c-purple;
+    display: block;
+    margin-bottom: .25rem;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article-container {
+  max-width: 100%;
+  width: 100%;
+
+  header {
+    background: linear-gradient(rgba(196, 165, 0, .7), rgba(196, 165, 0, .7)),
+      url("/images/alice-in-wonderland-big.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: rem(630);
+    position: relative;
+  }
+}
+.article-header__inner {
+  padding: 1rem;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+.article-header__bg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  position: absolute;
+  width: rd(572, 1440);
+  z-index: 20;
+}
+
+.article-inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  top: -100px;
+  width: rd(950, 1440);
+
+  @include breakpoint(max-width 950px) {
+    width: rd(1200, 1440);
+  }
+
+  @include breakpoint(max-width 950px) {
+    width: rd(1200, 1440);
+  }
+
+  @include breakpoint(max-width 600px) {
+    width: rd(1300, 1440);
+  }
+
+  h2 {
+    font-family: $f-mont;
+    font-weight: 300;
+    margin-bottom: rem(50);
+    @include fz(24);
+  }
+
+  p {
+    font-family: $f-merri;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: rem(50);
+    @include fz(16);
+  }
+}
+
+.article_meta {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  top: -80px;
+  width: rd(975, 1440);
+
+  @include breakpoint(max-width 950px) {
+    width: rd(1200, 1440);
+  }
+  @include breakpoint(max-width 950px) {
+    width: rd(1200, 1440);
+  }
+  @include breakpoint(max-width 600px) {
+    width: rd(1300, 1440);
+  }
+
+  small {
+    display: block;
+  }
+
+  span {
+    display: block;
+    &:first-of-type {
+      margin-bottom: .2rem;
+      text-transform: uppercase;
+      @include fz(16);
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 1rem;
+      @include fz(14);
+
+      a {
+        color: $c-purple;
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

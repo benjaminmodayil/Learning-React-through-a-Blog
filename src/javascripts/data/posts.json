@@ -1,15 +1,14 @@
-export default {
+{
   "response": [
     {
       "id": 1,
       "headerImg": "http://fillmurray.com/200/300",
-      "title": "Down the Rabbit Hole",
+      "title": "Down the Wabbit Hole",
       "body": "Hallo World",
       "meta": {
         "date": "November 3rd, 2017",
         "categories": ["Literature", "Science", "Math", "Geography"],
-        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"
-        ]
+        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"]
       },
       "author": 1
     },
@@ -21,11 +20,9 @@ export default {
       "meta": {
         "date": "November 3rd, 2017",
         "categories": ["Literature", "Science", "Math", "Geography"],
-        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"
-        ]
+        "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"]
       },
       "author": 2
     }
   ]
 }
-

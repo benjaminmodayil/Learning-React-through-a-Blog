@@ -1,0 +1,35 @@
+.home-container {
+  margin: 0 auto;
+  width: rd(950, 1440);
+
+  @include breakpoint(max-width 900px) {
+    width: rd(1200, 1440);
+  }
+  @include breakpoint(max-width 900px) {
+    width: rd(1300, 1440);
+  }
+  header {
+    @extend %clearfix;
+  }
+}
+
+.title {
+  display: block;
+  margin-bottom: rem(40);
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: .5rem;
+  }
+}
+
+.category-selector {
+  float: right;
+  margin-bottom: rem(36);
+
+  label {
+    margin-right: rem(11);
+  }
+}
