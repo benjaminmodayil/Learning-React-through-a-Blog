@@ -5,6 +5,7 @@
       "headerImg": "http://fillmurray.com/200/300",
       "title": "Down the Wabbit Hole",
       "body": "Hallo World",
+      "preview": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?.",
       "meta": {
         "date": "November 3rd, 2017",
         "categories": ["Literature", "Science", "Math", "Geography"],
@@ -15,10 +16,11 @@
     {
       "id": 2,
       "headerImg": "http://fillmurray.com/200/300",
-      "title": "Down the Rabbit Trail",
-      "body": "Hallo World",
+      "title": "Down the Dab-bit Trail",
+      "body": "Hallo Durld",
+      "preview": "Somebody once told me the world is gonna roll me. I ain't the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb. In the shape of an 'L' on her forehead",
       "meta": {
-        "date": "November 3rd, 2017",
+        "date": "May 3rd, 2017",
         "categories": ["Literature", "Science", "Math", "Geography"],
         "tags": ["Hemmingway", "Aristotle", "Pythagoreus", "Washington"]
       },

@@ -6,23 +6,37 @@ import authors from '../../data/authors.json'
 class ArticleIndex extends React.Component {
   constructor() {
     super()
-    this.state = { post: {} }
+    this.state = { posts: [] }
   }
-  // pull post into state
+  test() {
+    const allPosts = posts.response
+    const newPosts = []
+    for (var i = 0; i <= allPosts.length; i++) {
+      let post = allPosts[i] || {}
+      const author = authors.response.find(item => item.id == post.author)
+      post = Object.assign(post, { author })
+      newPosts.push(post)
+    }
+
+    this.setState({ posts: allPosts })
+  }
+
+  componentShouldMount() {
+    this.test()
+  }
+
   componentWillMount() {
-    const postId = 1
-    let post = posts.response.find(item => item.id == postId)
-    const author = authors.response.find(item => item.id == post.author)
-    post = Object.assign(post, { author })
-    this.setState({ post })
+    this.test()
   }
 
   render() {
+    console.log(this.props.params)
+
     return (
       <div className="article-index">
-        <ArticlePreview post={this.state.post} />
-        <ArticlePreview />
-        <ArticlePreview />
+        {this.state.posts.map(post => {
+          return <ArticlePreview key={post.preview} postInfo={post} />
+        })}
       </div>
     )
   }

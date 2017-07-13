@@ -11,13 +11,25 @@ class Article extends React.Component {
     super()
     this.state = { post: {} }
   }
-  // pull post into state
+  test() {
+    const newMessages = this.state.messages
+    let postr = posts.response
+    for (var i = 1; i <= postr.length; i++) {
+      let postId = i
+      let post = postr.find(item => item.id == postId)
+      const author = authors.response.find(item => item.id == post.author)
+      post = Object.assign(post, { author })
+      this.setState({ post })
+    }
+    // console.log(this.props.params.articleId)
+  }
+
+  componentShouldMount() {
+    this.test()
+  }
+
   componentWillMount() {
-    const postId = 1
-    let post = posts.response.find(item => item.id == postId)
-    const author = authors.response.find(item => item.id == post.author)
-    post = Object.assign(post, { author })
-    this.setState({ post })
+    this.test()
   }
 
   render() {
