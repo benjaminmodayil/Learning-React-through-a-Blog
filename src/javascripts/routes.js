@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
 import App from './presenters/application'
 import Blog from './components/blog/Blog'
 import Article from './components/blog/article/Article'
@@ -10,7 +10,7 @@ export default (
   <Router>
     <Route path="/" component={App}>
       <IndexRoute component={Blog} />
-      <Route path="article/:articleId" component={Article} />
+      <Route path="article/:id" component={Article} />
       <Route path="author/:authorId" component={Author} />
     </Route>
   </Router>

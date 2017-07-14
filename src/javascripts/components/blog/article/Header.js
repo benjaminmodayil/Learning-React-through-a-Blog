@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <header className="article-header">
         <div className="article-header__inner">
-          <Link to="/"><img src="./images/blog-title-alt.svg" alt="Aspiring Writers Alley Blog" /></Link>
+          <Link to="/"><img src="/images/blog-title-alt.svg" alt="Aspiring Writers Alley Blog" /></Link>
         </div>
         <div className="article-header__bg" />
       </header>

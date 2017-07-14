@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 class Text extends React.Component {
   render() {
     const { post } = this.props
+
     return (
       <div className="article-inner">
         <div className="article-inner__titleCard">

@@ -30,8 +30,6 @@ class ArticleIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.params)
-
     return (
       <div className="article-index">
         {this.state.posts.map(post => {

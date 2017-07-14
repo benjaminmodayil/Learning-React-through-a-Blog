@@ -11,7 +11,7 @@ class AuthorBio extends React.Component {
     return (
       <main className="bio">
         <Link to="/" className="logo-title">
-          <img src="./images/blog-title.svg" alt="Aspiring Writer's Alley - Link to Home" />
+          <img src="/images/blog-title.svg" alt="Aspiring Writer's Alley - Link to Home" />
         </Link>
         <div className="bio__inner">
           <img className="bio__inner__portrait" src="./images/lewis-carroll.png" alt="Lewis Carroll Portrait" />

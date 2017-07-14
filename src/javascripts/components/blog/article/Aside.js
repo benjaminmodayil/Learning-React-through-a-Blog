@@ -6,7 +6,7 @@ class Aside extends React.Component {
 
     return (
       <aside className="author-info">
-        <img src="./images/lewis-carroll.png" alt={post.author.name} />
+        <img src="/images/lewis-carroll.png" alt={post.author.name} />
         <div className="author-info__bio">
           <h2>{post.author.name}</h2>
           <p>

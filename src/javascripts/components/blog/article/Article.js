@@ -9,19 +9,18 @@ import authors from '../../../data/authors.json'
 class Article extends React.Component {
   constructor() {
     super()
-    this.state = { post: {} }
+    this.state = { posts: {} }
   }
   test() {
-    const newMessages = this.state.messages
-    let postr = posts.response
-    for (var i = 1; i <= postr.length; i++) {
-      let postId = i
-      let post = postr.find(item => item.id == postId)
+    const allPosts = posts.response
+    const newPosts = []
+    for (var i = 0; i <= allPosts.length; i++) {
+      let post = allPosts[i] || {}
       const author = authors.response.find(item => item.id == post.author)
       post = Object.assign(post, { author })
-      this.setState({ post })
+      newPosts.push(post)
     }
-    // console.log(this.props.params.articleId)
+    this.setState({ posts: { newPosts } })
   }
 
   componentShouldMount() {
@@ -29,18 +28,23 @@ class Article extends React.Component {
   }
 
   componentWillMount() {
+    // console.log(this.props)
     this.test()
+    console.log(this.state.posts.newPosts)
+  }
+  componentDidMount() {
+    console.log(this.state.posts.newPosts[1])
   }
 
   render() {
     return (
       <main className="article-container">
         <article>
-          <Header post={this.state.post} />
-          <Text post={this.state.post} />
+          <Header post={this.state.posts.newPosts[this.props.params.id - 1]} />
+          <Text post={this.state.posts.newPosts[this.props.params.id - 1]} />
+          <Meta post={this.state.posts.newPosts[this.props.params.id - 1]} />
+          <Aside post={this.state.posts.newPosts[this.props.params.id - 1]} />
         </article>
-        <Meta post={this.state.post} />
-        <Aside post={this.state.post} />
       </main>
     )
   }
