@@ -8,8 +8,9 @@
   @include breakpoint(max-width 900px) {
     width: rd(1300, 1440);
   }
+
   header {
-    @extend %clearfix;
+    @include clearfix;
   }
 }
 
@@ -20,7 +21,6 @@
   img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
     padding: .5rem;
   }
 }

@@ -1,8 +1,7 @@
-%clearfix {
+@mixin clearfix {
   &:after {
     content: "";
-    display: block;
+    display: table;
     clear: both;
   }
 }
-// mixin

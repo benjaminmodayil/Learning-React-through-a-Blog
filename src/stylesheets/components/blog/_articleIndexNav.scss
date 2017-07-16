@@ -1,7 +1,7 @@
 .article-index__nav {
   ul {
     width: 100%;
-    @extend %clearfix;
+    @include clearfix;
   }
 
   li {

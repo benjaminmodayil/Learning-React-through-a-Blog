@@ -8,7 +8,7 @@ class Header extends React.Component {
         <div className="article-header__inner">
           <Link to="/"><img src="/images/blog-title-alt.svg" alt="Aspiring Writers Alley Blog" /></Link>
         </div>
-        <div className="article-header__bg" />
+        <div className="article-header__bg"> </div>
       </header>
     )
   }

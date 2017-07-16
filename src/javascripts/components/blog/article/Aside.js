@@ -15,7 +15,7 @@ class Aside extends React.Component {
           <p>
             His most famous writings are Alice's Adventures in Wonderland, its sequel Through the Looking-Glass, which
             includes the poem Jabberwocky, and the poem The Hunting of the Snark, all examples of the genre of literary
-            nonsense.{' '}
+            nonsense.
           </p>
           <p>
             He is noted for his facility at word play, logic, and fantasy. There are societies in many parts of the

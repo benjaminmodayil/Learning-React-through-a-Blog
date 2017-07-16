@@ -7,12 +7,18 @@ class Meta extends React.Component {
       <div className="article_meta">
         <small>
           <span>Categories</span>
-          <span><a href="">{post.meta.categories.join(', ')}</a></span>
+          <span>
+            {post.meta.categories.map(category => {
+              return <a href="#">{`${category}, `}</a>
+            })}
+          </span>
         </small>
         <small>
           <span>Tags</span>
           <span>
-            <a href="">{post.meta.tags.join(', ')}</a>
+            {post.meta.tags.map(tag => {
+              return <a href="#">{`${tag}, `}</a>
+            })}
           </span>
         </small>
       </div>

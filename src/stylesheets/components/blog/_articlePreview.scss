@@ -5,8 +5,8 @@
   margin-bottom: rem(90);
   padding: 1rem;
   transition: all .3s ease-in-out;
-  @extend %clearfix;
 
+  @include clearfix;
   @include breakpoint(max-width 600px) {
     margin-bottom: rem(38);
   }
@@ -16,14 +16,15 @@
     font-family: $f-mont;
     font-weight: 400;
     margin-bottom: rem(20);
-    @include fz(36);
 
+    @include fz(36);
     @include breakpoint(max-width 650px) {
       @include fz(28);
     }
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $c-brightYellow;
 
     * {
@@ -38,34 +39,39 @@
   a {
     color: $c-text;
     text-decoration: none;
-    @extend %clearfix;
 
-    &:hover, &:focus {
+    @include clearfix;
+
+    &:hover,
+    &:focus {
       h1 {
         text-decoration: underline;
       }
     }
   }
+
   p {
     clear: both;
     font-family: $f-merri;
     line-height: 1.7;
     margin-top: rem(18);
-    @include fz(15);
 
+    @include fz(15);
     @include breakpoint(max-width 600px) {
       line-height: 1.8;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }
 
-  small {
+  span {
     float: left;
     font-family: $f-mont;
     font-weight: 300;
+
     @include fz(18);
 
     &:first-of-type {
@@ -77,6 +83,7 @@
       margin-left: 1rem;
     }
   }
+
   .-imageContainer {
     float: left;
     width: rd(200, 950);
@@ -107,15 +114,21 @@
   }
 
   .articlePreview-postMeta {
-    @extend %clearfix;
+    @include clearfix;
   }
 }
 .article-index {
   a {
     text-decoration: none;
 
-    &:focus, &:hover {
-      h1, h2, h3, h4, h5, h6 {
+    &:focus,
+    &:hover {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         text-decoration: underline;
       }
     }

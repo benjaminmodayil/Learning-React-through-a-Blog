@@ -7,14 +7,14 @@ class ArticleIndexPageNav extends React.Component {
         <ul>
           <li>
             <a href="">
-              <img src="./images/caret-left.svg" alt="Previous Page" />
+              <img src="/images/caret-left.svg" alt="Previous Page" />
               <span>Previous</span>
             </a>
           </li>
           <li>
             <a href="">
               <span>Next</span>
-              <img src="./images/caret-right.svg" alt="Next Page" />
+              <img src="/images/caret-right.svg" alt="Next Page" />
             </a>
           </li>
         </ul>

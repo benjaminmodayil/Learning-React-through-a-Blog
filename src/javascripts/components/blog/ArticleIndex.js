@@ -6,9 +6,10 @@ import authors from '../../data/authors.json'
 class ArticleIndex extends React.Component {
   constructor() {
     super()
-    this.state = { posts: [] }
+    this.state = { post: [] }
   }
-  test() {
+
+  postRender() {
     const allPosts = posts.response
     const newPosts = []
     for (var i = 0; i <= allPosts.length; i++) {
@@ -17,23 +18,31 @@ class ArticleIndex extends React.Component {
       post = Object.assign(post, { author })
       newPosts.push(post)
     }
-
-    this.setState({ posts: allPosts })
+    this.setState({ post: { newPosts } })
   }
 
   componentShouldMount() {
-    this.test()
+    this.postRender()
   }
 
   componentWillMount() {
-    this.test()
+    this.postRender()
   }
 
   render() {
+    const posts = this.state.post.newPosts
+    posts.map(post => {
+      if (post.body == null) {
+      }
+    })
+
     return (
       <div className="article-index">
-        {this.state.posts.map(post => {
-          return <ArticlePreview key={post.preview} postInfo={post} />
+        {posts.map(post => {
+          if (post.body == null) {
+          } else {
+            return <ArticlePreview key={post.title} postInfo={post} />
+          }
         })}
       </div>
     )

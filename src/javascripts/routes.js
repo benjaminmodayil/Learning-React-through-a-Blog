@@ -11,7 +11,7 @@ export default (
     <Route path="/" component={App}>
       <IndexRoute component={Blog} />
       <Route path="article/:id" component={Article} />
-      <Route path="author/:authorId" component={Author} />
+      <Route path="author/:id" component={Author} />
     </Route>
   </Router>
 )

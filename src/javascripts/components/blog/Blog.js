@@ -5,10 +5,8 @@ import ArticleIndexPageNav from './ArticleIndexPageNav'
 
 class Blog extends React.Component {
   render() {
-    // console.log(this.props.params)
-
     return (
-      <main className="home-container">
+      <main className="home-container wrapper">
         <Header />
         <ArticleIndex />
         <ArticleIndexPageNav />

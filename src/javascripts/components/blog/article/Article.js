@@ -11,39 +11,36 @@ class Article extends React.Component {
     super()
     this.state = { posts: {} }
   }
-  test() {
+
+  postRender() {
     const allPosts = posts.response
     const newPosts = []
-    for (var i = 0; i <= allPosts.length; i++) {
-      let post = allPosts[i] || {}
-      const author = authors.response.find(item => item.id == post.author)
-      post = Object.assign(post, { author })
-      newPosts.push(post)
-    }
-    this.setState({ posts: { newPosts } })
+    allPosts.map(i => {
+      let post = allPosts.find(item => item.id == i.id)
+      const author = authors.response.find(item => item.id == i.author)
+      post = Object.assign(i, { author })
+      newPosts.push(i)
+    })
+    this.setState({ post: { newPosts } })
   }
 
   componentShouldMount() {
-    this.test()
+    this.postRender()
   }
 
   componentWillMount() {
-    // console.log(this.props)
-    this.test()
-    console.log(this.state.posts.newPosts)
-  }
-  componentDidMount() {
-    console.log(this.state.posts.newPosts[1])
+    this.postRender()
   }
 
   render() {
+    const post = this.state.post.newPosts[this.props.params.id - 1]
     return (
-      <main className="article-container">
+      <main className="article-container wrapper">
         <article>
-          <Header post={this.state.posts.newPosts[this.props.params.id - 1]} />
-          <Text post={this.state.posts.newPosts[this.props.params.id - 1]} />
-          <Meta post={this.state.posts.newPosts[this.props.params.id - 1]} />
-          <Aside post={this.state.posts.newPosts[this.props.params.id - 1]} />
+          <Header post={post} />
+          <Text post={post} />
+          <Meta post={post} />
+          <Aside post={post} />
         </article>
       </main>
     )
