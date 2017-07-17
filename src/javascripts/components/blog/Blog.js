@@ -4,6 +4,9 @@ import ArticleIndex from './ArticleIndex'
 import ArticleIndexPageNav from './ArticleIndexPageNav'
 
 class Blog extends React.Component {
+  shouldComponentUpdate() {
+    return true
+  }
   render() {
     return (
       <main className="home-container wrapper">

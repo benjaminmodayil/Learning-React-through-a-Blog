@@ -7,7 +7,8 @@ import authors from '../../../data/authors.json'
 
 class AuthorBio extends React.Component {
   postRender() {
-    const allPosts = posts.response
+    const allPosts = JSON.parse(JSON.stringify(posts.response))
+
     const newPosts = []
     for (var i = 0; i <= allPosts.length; i++) {
       let post = allPosts[i] || {}
