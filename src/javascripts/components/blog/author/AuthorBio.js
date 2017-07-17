@@ -38,7 +38,7 @@ class AuthorBio extends React.Component {
         <div className="bio__inner">
           <img className="bio__inner__portrait" src={`${info.author.img}`} alt={`${info.author.name} Portrait`} />
           <h1>{info.author.name}</h1>
-          {info.author.bio}
+          <div dangerouslySetInnerHTML={{ __html: info.author.bio }} />
         </div>
         <div className="article-index">
           {posts.map(post => {

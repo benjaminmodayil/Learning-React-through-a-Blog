@@ -9,7 +9,7 @@ import authors from '../../../data/authors.json'
 class Article extends React.Component {
   constructor() {
     super()
-    this.state = { posts: {} }
+    this.state = { post: {} }
   }
 
   postRender() {
