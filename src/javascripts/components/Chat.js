@@ -21,7 +21,8 @@ class Chat extends React.Component {
           user: 'yellow',
           message: 'Hallo lorem'
         }
-      ]
+      ],
+      classname: 'dank'
     }
   }
 
@@ -63,12 +64,18 @@ class Chat extends React.Component {
     this.setState({ messages: newMessages })
     this.addResponse()
   }
-
+  changeClass = name => {
+    if (name == undefined || name == null) {
+      console.log('oopsy')
+    }
+  }
   render() {
     return (
-      <div className="container">
-        <ChatBoxSettings />
-        <ChatBox messages={this.state.messages} params={this.props.params.messageId} />
+      <div className="chat_container">
+        <ChatBoxSettings classname={this.state.classname} onClick={this.changeClass()} />
+        <ChatBox messages={this.state.messages} />
+        {/*  params={this.props.params.messageId} 
+      this was passed on ChatBox above as well, I don't think it's needed -you from the past */}
         <ChatInput onSubmit={this.addMessage} />
       </div>
     )

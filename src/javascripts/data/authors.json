@@ -4,13 +4,15 @@
       "id": 1,
       "img": "/images/lewis-carroll.png",
       "name": "Lewis Carroll",
-      "bio": "<p>Charles Lutwidge Dodgson (27 January 1832 – 14 January 1898), better known by his pen name, Lewis Carroll, was an English writer, mathematician, logician, Anglican deacon and photographer. </p> <p> His most famous writings are Alice's Adventures in Wonderland, its sequel Through the Looking-Glass, which includes the poem Jabberwocky, and the poem The Hunting of the Snark, all examples of the genre of literary nonsense. </p> <p> He is noted for his facility at word play, logic, and fantasy. There are societies in many parts of the world (including the United Kingdom, Japan, the United States, and New Zealand[3]) dedicated to the enjoyment and promotion of his works and the investigation of his life. In 1982, his great-nephew unveiled his memorial stone in Poets' Corner, Westminster Abbey.</p>"
+      "bio": [
+        "<p>Charles Lutwidge Dodgson (27 January 1832 – 14 January 1898), better known by his pen name, Lewis Carroll, was an English writer, mathematician, logician, Anglican deacon and photographer.</p><p>His most famous writings are Alice's Adventures in Wonderland, its sequel Through the Looking-Glass, which includes the poem Jabberwocky, and the poem The Hunting of the Snark, all examples of the genre of literary nonsense.</p><p>He is noted for his facility at word play, logic, and fantasy. There are societies in many parts of the world (including the United Kingdom, Japan, the United States, and New Zealand) dedicated to the enjoyment and promotion of his works and the investigation of his life. In 1982, his great-nephew unveiled his memorial stone in Poets' Corner, Westminster Abbey.</p>"
+      ]
     },
     {
       "id": 2,
       "img": "/images/mike-springer.png",
       "name": "Mike Springer",
-      "bio": "Charles Francis Xavier was born the son of nuclear researcher Brian Xavier and his wife, Sharon. Following her husband's accidental death, Sharon married Brian's colleague, Kurt Marko. Cain, Kurt's son by a previous marriage, came to live at the Xavier’s Westchester mansion shortly thereafter. A cruel and spiteful boy, he bullied his new stepbrother. As punishment, his father secretly beat him - and young Charles felt his sibling's pain firsthand thanks to the emergence of his mutant telepathic powers. Following their mother’s death, a fire in the family home took Kurt’s life, leaving the stepbrothers alone."
+      "bio": "<p>Michael Paul Springer (born November 3, 1965) is an American professional golfer who has played on the PGA Tour and the Nationwide Tour.</p><p>Springer was born in San Francisco, California. He attended the University of Arizona. He turned pro in 1988 and joined the PGA Tour in 1991.</p><p>Springer began his career in professional golf on the Ben Hogan Tour, an predecessor of what later became the Web.com Tour. He won three events in this venue in 1990 (including the tour's very first event in Bakersfield) and one in 1992. His first PGA Tour win came as a wire-to-wire victory in 1994 at the KMart Greater Greensboro Open. His career year was 1994 when he won two PGA Tour events, earned $770,711, and finished 13th on the money list. Springer has 22 top-10 finishes in PGA Tour events.[3] His best finish in a major is a T-24 at the 1994 British Open.</p>"
     }
   ]
 }

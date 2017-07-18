@@ -31,9 +31,12 @@ class Article extends React.Component {
     this.postRender()
   }
 
+  componentDidUpdate() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
-    const post = this.state.post
-    console.log(post)
+    const { post } = this.state
 
     if (post) {
       return (

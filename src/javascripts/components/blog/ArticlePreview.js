@@ -5,7 +5,6 @@ class ArticlePreview extends React.Component {
   render() {
     const { postInfo } = this.props
     const linkId = `/article/${postInfo.id}`
-    // this id for the preview is messing with the preview component on the author bio page
 
     return (
       <div className="article-index__preview" data-id={postInfo.id}>

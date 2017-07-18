@@ -1,0 +1,6 @@
+1. integrate chatApp
+  - animate state with CSS classes
+1. Setup filtering (perhaps add more articles?)
+2. Setup pagination
+3. Categories/Tags view (Setup a filter page/component that leads from the article view to to a page with filtering).
+4. After clicking a link, scroll back up

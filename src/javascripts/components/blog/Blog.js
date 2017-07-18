@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import ArticleIndex from './ArticleIndex'
 import ArticleIndexPageNav from './ArticleIndexPageNav'
+import Chat from '../Chat'
 
 class Blog extends React.Component {
   shouldComponentUpdate() {
@@ -13,6 +14,7 @@ class Blog extends React.Component {
         <Header />
         <ArticleIndex />
         <ArticleIndexPageNav />
+        <Chat />
       </main>
     )
   }
