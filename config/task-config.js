@@ -23,7 +23,7 @@ module.exports = {
 
   browserSync: {
     proxy: {
-      target: 'my-rails-project.dev'
+      target: 'localhost:8888'
     }
   },
 
@@ -33,5 +33,3 @@ module.exports = {
 
   react: true
 }
-
-

@@ -14,17 +14,13 @@ class ChatBox extends React.Component {
   render() {
     const { messages } = this.props
     return (
-      <div ref={(chatbox) => this.chatcontainer = chatbox} className="chatbox">
-        { messages.map((message) => {
-          if (message.user === "blue") {
-            return(
-              <MessageRight text={message.message}/>
-            )
+      <div ref={chatbox => (this.chatcontainer = chatbox)} className="chatbox">
+        {messages.map(message => {
+          if (message.user === 'blue') {
+            return <MessageRight text={message.message} />
           } else {
-              return(
-                <MessageLeft text={message.message}/>
-              )
-            }
+            return <MessageLeft text={message.message} />
+          }
         })}
       </div>
     )

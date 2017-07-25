@@ -22,7 +22,7 @@ class Chat extends React.Component {
           message: 'Hallo lorem'
         }
       ],
-      classname: 'dank'
+      showChat: false
     }
   }
 
@@ -58,21 +58,25 @@ class Chat extends React.Component {
       user: 'blue',
       message: text
     }
-
     const newMessages = this.state.messages
     newMessages.push(newMsg)
     this.setState({ messages: newMessages })
     this.addResponse()
   }
-  changeClass = name => {
-    if (name == undefined || name == null) {
-      console.log('oopsy')
-    }
+  onClick = () => {
+    this.setState({ showChat: !this.state.showChat })
+    // alert(this.state.showChat)
   }
+  isOpen = () => {
+    return this.state.showChat ? 'show' : 'hide'
+  }
+
+  // {this.state.showChat ? alert('hi') : null}
   render() {
     return (
-      <div className="chat_container">
-        <ChatBoxSettings classname={this.state.classname} onClick={this.changeClass()} />
+      <div className={`chat_container ${this.isOpen()}`}>
+        <ChatBoxSettings onClick={this.onClick} />
+
         <ChatBox messages={this.state.messages} />
         {/*  params={this.props.params.messageId} 
       this was passed on ChatBox above as well, I don't think it's needed -you from the past */}
